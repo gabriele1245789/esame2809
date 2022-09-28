@@ -39,6 +39,16 @@ class punteggio{
             os<<"anno di nascita:"<<obj.getPunti()<<endl;
             return os;
         }
+            bool operator <= (punteggio& obj){return this->punti <= obj.punti;}
+
+            bool operator >= (punteggio& obj){return this->punti >= obj.punti;}
+
+            bool operator > (punteggio& obj){return this->punti > obj.punti ;}
+
+            bool operator < (punteggio& obj){return this->punti < obj.punti ;}
+
+            bool operator ==(punteggio& obj){return this->punti == obj.punti ;}
+            bool operator !=(punteggio& obj){return this->punti != obj.punti ;}
         
 
 
