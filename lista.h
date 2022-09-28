@@ -1,5 +1,6 @@
 #ifndef LISTA_H
 #define LISTA_H
+#include "punteggio.h"
 
 #include <iostream>
 #include <string>
@@ -58,6 +59,21 @@ class List{
         tail = temp; //aggiorno la coda
         counter++;
     }
+    friend ostream& operator<< (ostream& os,List<T>& obj){
+		if(obj.isEmpty())
+			return os << "\nEmpty List !" << endl;
+		os << "Head: " << *obj.head << endl;
+		os << "list: "<< endl;
+
+		Node<T>* ptr = obj.head;
+		os << "\nHead --> ";
+		while(ptr){
+			os << *ptr << " --> ";
+			ptr = ptr->getNext();
+		}
+
+		return os << "NIL" << endl << "\nEnd List\n" << endl; 
+	}
     };
 
 #endif

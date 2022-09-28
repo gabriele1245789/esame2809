@@ -6,6 +6,7 @@ int main(){
     file.open("Punteggi.txt");
     int count=0;
     string s;
+    List<punteggio> lista;
     while(getline(file,s)){
         count++;
     }
@@ -24,9 +25,21 @@ int main(){
         punteggio1=atof(punteggio0.c_str());
         anno1=atoi(anno.c_str());
         pointers[i]=new punteggio(cognome,nome,circolo,punteggio1,anno1);
+        if(i==0){
+            lista.insert(*pointers[i]);
+        }
+        else if(i==count-1){
+            lista.insertTail(*pointers[i]);
+        }
+        else{
+            lista.insertHead(*pointers[i]);
+        }
+
         
       
     }
+    cout<<lista;
+
 
 
 
