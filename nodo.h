@@ -2,6 +2,8 @@
 #define NODE_H
 #include<iostream>
 using namespace std;
+#include "punteggio.h"
+
 
 template<class T>
 class Node{

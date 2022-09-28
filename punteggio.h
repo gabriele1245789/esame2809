@@ -2,6 +2,7 @@
 #define PUNTEGGIO_H
 #include<iostream>
 #include<string>
+#include<cstring>
 using namespace std;
 
 class punteggio{
@@ -9,6 +10,8 @@ class punteggio{
         string cognome,nome,circolo;
         double punti;
         int anno;
+        public:
+
         punteggio(string cognome,string nome,string circolo,double punti,int anno){
             this->cognome=cognome;
             this->nome=nome;
